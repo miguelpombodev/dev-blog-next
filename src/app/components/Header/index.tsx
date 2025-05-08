@@ -1,11 +1,14 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
-    <header>
-      <a>Teste 1</a>
-      <a>Teste 2</a>
-      <a>Teste 3</a>
-      <a>Teste 5</a>
-      <a>Teste 6</a>
+    <header className="flex h-20 items-center py-20 px-50">
+      <div className="flex w-1/2 h-10 border-b-secondary border-b-1 justify-evenly text-xl header-links">
+        <Link href="/">Home</Link>
+        <Link href="/portfolio">Portfolio</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/portfolio">Youtube</Link>
+      </div>
     </header>
   );
 }
