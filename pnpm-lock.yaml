@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@deemlol/next-icons':
+        specifier: ^0.1.9
+        version: 0.1.9(react@19.1.0)
       next:
         specifier: 15.3.1
         version: 15.3.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -51,6 +54,11 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@deemlol/next-icons@0.1.9':
+    resolution: {integrity: sha512-TgKjPAyNTmmpmYSvRX6T0ZkqdV96vo7iEkiCEhQ8ZpBXrKvBokRn3wmuoFv44st6hI0vw2SVsF3TXrKe+s3MUQ==}
+    peerDependencies:
+      react: ^19.0.0
 
   '@emnapi/core@1.4.3':
     resolution: {integrity: sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==}
@@ -1925,6 +1933,10 @@ packages:
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
+
+  '@deemlol/next-icons@0.1.9(react@19.1.0)':
+    dependencies:
+      react: 19.1.0
 
   '@emnapi/core@1.4.3':
     dependencies:
