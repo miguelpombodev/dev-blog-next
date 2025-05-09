@@ -3,6 +3,11 @@ import useEmblaCarousel from "embla-carousel-react";
 import ImageComponent from "../Image";
 import ICarouselImages from "@/lib/interfaces/carouselImages.interface";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
+import {
+  NextButton,
+  PrevButton,
+  usePrevNextButtons,
+} from "./carouselArrowsButtons";
 
 interface CarouselProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -16,7 +21,14 @@ export default function CaroulselComponent({
   imagesWidth,
   imagesHeight,
 }: CarouselProps) {
-  const [emblaRef] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
   return (
     <div className="embla" ref={emblaRef}>
@@ -32,6 +44,12 @@ export default function CaroulselComponent({
             />
           </div>
         ))}
+      </div>
+      <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
       </div>
     </div>
   );

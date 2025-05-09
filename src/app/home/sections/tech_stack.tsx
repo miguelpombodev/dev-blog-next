@@ -1,4 +1,4 @@
-import CaroulselComponent from "@/app/components/Caroulsel";
+import CaroulselComponent from "@/app/components/Carousel";
 import path from "path";
 import fs from "fs";
 import { extractFilenameWithoutExtensions } from "@/util/files.util";
