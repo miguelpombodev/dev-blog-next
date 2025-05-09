@@ -8,20 +8,29 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./carouselArrowsButtons";
+import Autoplay from "embla-carousel-autoplay";
 
 interface CarouselProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   images: ICarouselImages[];
   imagesWidth: number;
   imagesHeight: number;
+  autoplay?: boolean;
 }
 
 export default function CaroulselComponent({
   images,
   imagesWidth,
   imagesHeight,
+  autoplay = false,
 }: CarouselProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  Autoplay.globalOptions = {
+    active: autoplay,
+    delay: 2000,
+    stopOnInteraction: true,
+  };
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   const {
     prevBtnDisabled,

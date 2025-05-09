@@ -33,6 +33,7 @@ export default function TechStack() {
           images={getPublicIcons()}
           imagesWidth={80}
           imagesHeight={80}
+          autoplay={true}
         />
       </div>
     </div>
