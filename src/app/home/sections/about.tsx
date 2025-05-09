@@ -4,13 +4,13 @@ export default function AboutSection() {
   const fileS3Image = `${process.env.NEXT_AWS_S3_URL}/BAFC0BF7-56D4-4AA6-BE85-CA416587EDB0.JPG`;
 
   return (
-    <div className="flex items-center justify-evenly max-h-2/8 py-11">
-      <span className="flex w-1/5">
-        <h2 className="font-bold text-4xl underline underline-offset-10 decoration-secondary">
+    <div className="flex flex-col items-baseline justify-evenly max-h-2/8 py-11 md:flex-row md:items-center">
+      <span className="flex md:w-1/5">
+        <h2 className="font-bold text-8xl underline underline-offset-10 decoration-secondary md:text-4xl">
           Let’s More About Me
         </h2>
       </span>
-      <span className="flex w-1/5">
+      <span className="flex p-7 md:w-1/5 md:p-0">
         Hello! My name is Miguel and I am a Software Engineer with over 6 years
         of experience specializing in backend development with .NET (C#) and
         Python, with additional exposure to NodeJS and Java. Expertise in
@@ -27,7 +27,7 @@ export default function AboutSection() {
         src={fileS3Image}
         alt="front-page-description-image"
         title="front-page-description-image"
-        className="w-2/9 rounded-full"
+        className="w-2/3 self-center rounded-full md:w-2/9"
       />
     </div>
   );

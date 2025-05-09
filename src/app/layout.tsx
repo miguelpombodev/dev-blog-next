@@ -30,6 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`${mainFont.className} ${secondaryFont.className}`}
     >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body>
         <Header />
         <main className="flex flex-col">{children}</main>
