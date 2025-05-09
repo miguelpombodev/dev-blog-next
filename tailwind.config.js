@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        clash: ["ClashDisplay-Medium", "sans-serif"],
+      },
       borderRadius: {
         "1/20": "20%",
       },

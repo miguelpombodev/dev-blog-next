@@ -24,11 +24,11 @@ export default function TechStack() {
   }
 
   return (
-    <div className="flex flex-col text-center py-11 justify-evenly">
-      <h2 className="font-bold text-4xl underline underline-offset-10 decoration-secondary pb-8">
+    <div className="flex flex-col text-center pt-11 pb-7 justify-evenly">
+      <h2 className="font-bold text-4xl underline underline-offset-10 decoration-secondary mb-13">
         Tools and Frameworks Expertise
       </h2>
-      <div className="my-10">
+      <div className="">
         <CaroulselComponent
           images={getPublicIcons()}
           imagesWidth={80}

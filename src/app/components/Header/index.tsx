@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Youtube } from "@deemlol/next-icons";
+import ImageComponent from "../Image";
+import YoutubeSVG from "../../../../public/svgs/youtube-svgrepo-com.svg";
 
 export default function Header() {
   return (
@@ -14,10 +15,20 @@ export default function Header() {
         <Link href="/blog">
           <span>Blog</span>
         </Link>
-        <Link href="/portfolio" className="flex items-center">
+        <a
+          href="https://www.youtube.com/@miguelpombodev"
+          className="flex items-center"
+          target="_blank"
+        >
           <span className="mr-1.5">Youtube</span>
-          <Youtube size={24} color="#f03" />
-        </Link>
+          <ImageComponent
+            src={YoutubeSVG}
+            alt="Youtube Icon"
+            title="Youtube Icon"
+            width={25}
+            height={25}
+          />
+        </a>
       </div>
     </header>
   );
