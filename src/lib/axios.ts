@@ -1,5 +1,22 @@
-import axios from "axios";
+export default class FetchApiClient {
+  private readonly _cacheTime: number;
+  private readonly _baseURL: string;
 
-export const api = axios.create({
-  baseURL: process.env.NEXT_GITHUB_BASE_URL,
-});
+  constructor() {
+    this._baseURL = process.env.NEXT_GITHUB_BASE_URL!;
+    this._cacheTime = 60;
+  }
+  public async Get<T>(url: string): Promise<T> {
+    const res = await fetch(`${process.env.NEXT_GITHUB_BASE_URL}/${url}`, {
+      next: { revalidate: this._cacheTime },
+    });
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch: ${res.status}`);
+    }
+
+    const json: T = await res.json();
+
+    return json;
+  }
+}

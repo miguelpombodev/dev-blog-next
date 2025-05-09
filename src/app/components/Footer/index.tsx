@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex w-4/5 mt-15 py-12 border-t-1 border-t-secondary text-secondary md:py-12">
-        <div className="flex flex-2/3 flex-col links md: flex-row">
+        <div className="flex flex-2/3 flex-col links md:flex-row">
           <a target="_blank" href="#">
             X
           </a>

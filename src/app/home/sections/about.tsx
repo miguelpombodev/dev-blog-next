@@ -10,19 +10,17 @@ export default function AboutSection() {
           Let’s More About Me
         </h2>
       </span>
-      <span className="flex p-7 md:w-1/5 md:p-0">
-        Hello! My name is Miguel and I am a Software Engineer with over 6 years
-        of experience specializing in backend development with .NET (C#) and
-        Python, with additional exposure to NodeJS and Java. Expertise in
-        building scalable applications and integrating relational databases such
-        as SQL Server, PostgreSQL, and MySQL, as well as NoSQL solutions like
-        MongoDB and Redis. Proficient in working with Message Brokers, including
-        RabbitMQ and Azure Queues, and experienced in cloud integration with AWS
-        and Azure. Skilled in observability tools such as Elastic Stack,
-        Grafana, and Prometheus, as well as containerization technologies like
-        Docker and Kubernetes. Also experienced in frontend development with
-        NodeJS and React.
+      <span className="flex p-7 md:w-1/5 whitespace-pre-line md:p-0 md:text-lg">
+        Hello! My name is Miguel! I am a Software Engineer and I am from Brazil
+        🇧🇷{"\n"}
+        It's so nice to meet you here in my webpage! Here you'll see some of my
+        professional experiencies, some projects that worked for and also some
+        of my blog posts, in which could be related to .NET, Databases,
+        Developer Career, and so on.{"\n"}
+        Be free to check my social medias, and send me a DM there!{"\n"}
+        See you, friend!
       </span>
+
       <ImageComponent
         src={fileS3Image}
         alt="front-page-description-image"

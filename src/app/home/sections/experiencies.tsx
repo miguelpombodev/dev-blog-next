@@ -1,9 +1,13 @@
-import { api } from "@/lib/axios";
+import FetchApiClient from "@/lib/axios";
 import { IGetGithubUser } from "@/lib/interfaces/github.interface";
 import { getYearOfExperienceDiff } from "@/util/dates.util";
 
 export default async function ExperiencesSection() {
-  const res = (await api.get<IGetGithubUser>("/users/miguelpombodev")).data;
+  const fetchApi = new FetchApiClient();
+
+  const getRepoCount = await fetchApi.Get<IGetGithubUser>(
+    "users/miguelpombodev"
+  );
 
   return (
     <div className="flex bg-gray-light py-11 items-center justify-center flex-col">
@@ -17,24 +21,31 @@ export default async function ExperiencesSection() {
         other tools, like RabbitMQ, Kafka Apache, Observability tools.
       </span>
       <div className="flex flex-col py-5 border-y-1 border-black w-5/6 px-3 mt-11 justify-evenly md:flex-row md:py-11">
-        <span className="flex flex-col text-center px-8">
+        <span className="flex flex-col text-center py-8">
           <p className="text-5xl">
             <span className="text-secondary">{getYearOfExperienceDiff()}</span>{" "}
             Years
           </p>
           <p className="text-lg font-light">Experience</p>
         </span>
-        <span className="flex flex-col text-center my-5 py-5 border-y-1 border-black md:my-0 md:border-y-0 md:py-0 md:px-30 md:border-x-1 md:border-black">
+        <span className="flex flex-col text-center py-8 border-y-1 border-black md:my-0 md:border-y-0 md:py-0 md:px-30 md:border-x-1 md:border-black">
           <p className="text-5xl">
-            <span className="text-secondary">{res.public_repos}</span> repos
+            <span className="text-secondary">{getRepoCount.public_repos}</span>{" "}
+            repos
           </p>
           <p className="text-lg font-light">On Github</p>
         </span>
-        <span className="flex flex-col text-center px-3">
+        <span className="flex flex-col text-center py-8 border-b-1 border-black md:my-0 md:border-y-0 md:py-0 md:px-30 md:border-r-1 md:border-black">
           <p className="text-5xl">
-            <span className="text-secondary">6</span> Years
+            <span className="text-secondary">+20</span> Users
           </p>
-          <p className="text-lg font-light">Experience</p>
+          <p className="text-lg font-light">On My Discord Community</p>
+        </span>
+        <span className="flex flex-col text-center py-8">
+          <p className="text-5xl">
+            <span className="text-secondary">+5</span> Mentees
+          </p>
+          <p className="text-lg font-light">Having Career Support</p>
         </span>
       </div>
     </div>
