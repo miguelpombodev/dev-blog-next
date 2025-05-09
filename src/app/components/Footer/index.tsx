@@ -9,19 +9,22 @@ export default function Footer() {
         </h1>
         <div className="flex flex-col gap-6 items-center justify-center w-full mt-10 md:flex-row">
           <button
-            className=" bg-secondary md:mr-30 hover:bg-secondary-darker 
+            className="bg-secondary md:mr-30 hover:bg-secondary-darker 
              text-white transition-colors duration-300 ease-in-out"
           >
             Contact Me
           </button>
-          <button
-            className="border border-secondary text-secondary flex items-center w-49
+          <a
+            className="p-3 rounded-[12] font-semibold cursor-pointer border border-secondary text-secondary flex items-center w-49
              hover:bg-secondary hover:text-white 
              transition-colors duration-300 ease-in-out"
+            download="Miguel_Pombo_Resume"
+            target="_blank"
+            href="/resume/Miguel Pombo_Resume.pdf"
           >
             <Download className="mr-4" />
             Get My CV Here!
-          </button>
+          </a>
         </div>
       </div>
       <div className="flex w-4/5 mt-15 py-12 border-t-1 border-t-secondary text-secondary md:py-12">
