@@ -20,28 +20,28 @@ export default async function ExperiencesSection() {
         expertise about building scalable applications, and integration with
         other tools, like RabbitMQ, Kafka Apache, Observability tools.
       </span>
-      <div className="flex flex-col py-5 border-y-1 border-black w-5/6 px-3 mt-11 justify-evenly md:flex-row md:py-11">
-        <span className="flex flex-col text-center py-8">
+      <div className="flex flex-col items-center py-5 border-y-1 text-center border-black w-5/6 px-3 mt-11 justify-evenly md:flex-row md:py-11">
+        <span className="flex flex-col w-4/5 py-5 text-center border-b-1 border-black md:w-auto md:pr-12 md:px-6 md:border-y-0 md:border-r-1 md:border-black">
           <p className="text-5xl">
             <span className="text-secondary">{getYearOfExperienceDiff()}</span>{" "}
             Years
           </p>
           <p className="text-lg font-light">Experience</p>
         </span>
-        <span className="flex flex-col text-center py-8 border-y-1 border-black md:my-0 md:border-y-0 md:py-0 md:px-30 md:border-x-1 md:border-black">
+        <span className="flex flex-col w-4/5 py-5 text-center border-b-1 border-black md:w-auto md:pr-12 md:px-6 md:border-y-0 md:border-r-1 md:border-black">
           <p className="text-5xl">
             <span className="text-secondary">{getRepoCount.public_repos}</span>{" "}
             repos
           </p>
           <p className="text-lg font-light">On Github</p>
         </span>
-        <span className="flex flex-col text-center py-8 border-b-1 border-black md:my-0 md:border-y-0 md:py-0 md:px-30 md:border-r-1 md:border-black">
+        <span className="flex flex-col w-4/5 py-5 text-center border-b-1 border-black md:w-auto md:pr-12 md:px-6 md:border-y-0 md:border-r-1 md:border-black">
           <p className="text-5xl">
             <span className="text-secondary">+20</span> Users
           </p>
           <p className="text-lg font-light">On My Discord Community</p>
         </span>
-        <span className="flex flex-col text-center py-8">
+        <span className="flex flex-col w-4/5 py-5 text-center md:w-auto">
           <p className="text-5xl">
             <span className="text-secondary">+5</span> Mentees
           </p>
