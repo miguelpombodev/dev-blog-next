@@ -65,6 +65,11 @@
   height: 35%;
 }
 
+.links a {
+  margin-right: 5rem;
+  cursor: pointer;
+}
+
 @theme inline {
   --color-secondary: #fa5140;
   --color-secondary-darker: #e03c2c;
