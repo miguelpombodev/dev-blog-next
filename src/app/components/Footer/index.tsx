@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="flex flex-col h-sm bg-background w-full items-center py-11">
       <div className="flex flex-col text-white p justify-center items-center md:w-1/2">
         <h1 className="text-2xl text-center leading-10 font-clash md:text-7xl md:leading-24">
-          Let's Hire Me And Make The Best Product
+          Let&apos;s Hire Me And Make The Best Product
         </h1>
         <div className="flex flex-col gap-6 items-center justify-center w-full mt-10 md:flex-row">
           <button
