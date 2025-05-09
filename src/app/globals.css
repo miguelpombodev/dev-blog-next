@@ -21,6 +21,10 @@
   align-items: center;
   justify-content: center;
   min-width: 80px;
+
+  @media only screen and (max-width: 768px) {
+    flex: 0 0 30%;
+  }
 }
 
 .embla__controls {
