@@ -13,10 +13,10 @@ export default function AboutSection() {
       <span className="flex p-7 md:w-1/5 whitespace-pre-line md:p-0 md:text-lg">
         Hello! My name is Miguel! I am a Software Engineer and I am from Brazil
         🇧🇷{"\n"}
-        It's so nice to meet you here in my webpage! Here you'll see some of my
-        professional experiencies, some projects that worked for and also some
-        of my blog posts, in which could be related to .NET, Databases,
-        Developer Career, and so on.{"\n"}
+        It&apos;s so nice to meet you here in my webpage! Here you&apos;ll see
+        some of my professional experiencies, some projects that worked for and
+        also some of my blog posts, in which could be related to .NET,
+        Databases, Developer Career, and so on.{"\n"}
         Be free to check my social medias, and send me a DM there!{"\n"}
         See you, friend!
       </span>
