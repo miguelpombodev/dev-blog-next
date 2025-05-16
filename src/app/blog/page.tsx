@@ -1,6 +1,4 @@
 import { IArticle } from "@/lib/interfaces/http/article.interface";
-import ImageComponent from "../components/Image";
-import { Pen } from "lucide-react";
 import ArticleComponent from "../components/Article";
 
 export default function BlogMainPage() {
@@ -11,6 +9,7 @@ export default function BlogMainPage() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQysm7d0JnuK4_jPG6U3Fyd1cRzbb78Z_7-4g&s",
       title: "Descrição artigo",
       description: "Descrição artigo",
+      slug: "teste-1",
       createdAt: "12 March",
     },
     {
@@ -19,6 +18,7 @@ export default function BlogMainPage() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQysm7d0JnuK4_jPG6U3Fyd1cRzbb78Z_7-4g&s",
       title: "Descrição artigo",
       description: "Descrição artigo",
+      slug: "teste-2",
       createdAt: "12 March",
     },
     {
@@ -27,6 +27,7 @@ export default function BlogMainPage() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQysm7d0JnuK4_jPG6U3Fyd1cRzbb78Z_7-4g&s",
       title: "Descrição artigo",
       description: "Descrição artigo",
+      slug: "teste-3",
       createdAt: "12 March",
     },
     {
@@ -35,6 +36,7 @@ export default function BlogMainPage() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQysm7d0JnuK4_jPG6U3Fyd1cRzbb78Z_7-4g&s",
       title: "Descrição artigo",
       description: "Descrição artigo",
+      slug: "teste-4",
       createdAt: "12 March",
     },
     {
@@ -43,6 +45,7 @@ export default function BlogMainPage() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQysm7d0JnuK4_jPG6U3Fyd1cRzbb78Z_7-4g&s",
       title: "Descrição artigo",
       description: "Descrição artigo",
+      slug: "teste-5",
       createdAt: "12 March",
     },
   ];
