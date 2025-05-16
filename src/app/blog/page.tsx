@@ -22,13 +22,6 @@ export default async function BlogMainPage() {
   const fetchApi = new FetchApiClient();
   const articles = await fetchApi.Get<IArticle[]>("devblog", "article");
 
-  //     const getRepoCount = await fetchApi.Get<IGetGithubUser>(
-  //       "github",
-  //       "users/miguelpombodev"
-  //     );
-
-  //   const articles: IArticle[] = [];
-
   return (
     <div className="flex flex-col px-[10] py-10 items-center">
       <h1 className="mb-15 text-5xl md:mb-0">Articles</h1>
