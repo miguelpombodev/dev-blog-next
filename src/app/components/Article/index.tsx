@@ -4,7 +4,7 @@ import ImageComponent from "../Image";
 
 export default function ArticleComponent(props: ArticleComponentProps) {
   return (
-    <div className="py-4 w-full ">
+    <div className="py-4 w-5/6 border-b-1 border-foreground">
       <span className="flex items-start h-30 gap-5 ">
         <ImageComponent
           src={props.article.articleImageSrc}
