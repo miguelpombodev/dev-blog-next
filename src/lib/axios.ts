@@ -1,13 +1,20 @@
+type UrlsMapType = {
+  github: string;
+  devblog: string;
+};
+
 export default class FetchApiClient {
   private readonly _cacheTime: number;
-  private readonly _baseURL: string;
+  private readonly _urlsMap: UrlsMapType = {
+    github: process.env.NEXT_GITHUB_BASE_URL!,
+    devblog: process.env.NEXT_DEV_BLOG_API_URL!,
+  };
 
   constructor() {
-    this._baseURL = process.env.NEXT_GITHUB_BASE_URL!;
     this._cacheTime = 60;
   }
-  public async Get<T>(url: string): Promise<T> {
-    const res = await fetch(`${process.env.NEXT_GITHUB_BASE_URL}/${url}`, {
+  public async Get<T>(flag: keyof UrlsMapType, url: string): Promise<T> {
+    const res = await fetch(`${this._urlsMap[flag]}/${url}`, {
       next: { revalidate: this._cacheTime },
     });
 
