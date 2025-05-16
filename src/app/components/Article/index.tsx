@@ -6,6 +6,7 @@ import { tranformTimezoneDateInLiteral } from "@/util/dates.util";
 import TagComponent from "../Tags";
 
 export default function ArticleComponent(props: ArticleComponentProps) {
+  console.log(props.article.slug);
   return (
     <div className="py-4 w-full border-b-1 border-foreground md:w-5/6">
       <Link
