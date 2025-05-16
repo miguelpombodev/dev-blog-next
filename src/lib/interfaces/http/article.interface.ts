@@ -1,9 +1,9 @@
 export interface IArticle {
-  id: string;
+  _id: string;
   articleImageSrc: string;
   briefDescription: string;
   title: string;
-  description: string;
+  content: string;
   slug: string;
   createdAt: string;
 }

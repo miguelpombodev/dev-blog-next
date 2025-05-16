@@ -2,6 +2,7 @@ import { ArticleComponentProps } from "../../../lib/interfaces/components/articl
 import { Pen } from "lucide-react";
 import ImageComponent from "../Image";
 import Link from "next/link";
+import { tranformTimezoneDateInLiteral } from "@/util/dates.util";
 
 export default function ArticleComponent(props: ArticleComponentProps) {
   return (
@@ -26,7 +27,7 @@ export default function ArticleComponent(props: ArticleComponentProps) {
           <div className="flex">
             <span className="text-xs text-gray-700 flex gap-1 items-center">
               <Pen width={12} height={12} />
-              {props.article.createdAt}
+              {tranformTimezoneDateInLiteral(props.article.createdAt)}
             </span>
           </div>
         </div>
