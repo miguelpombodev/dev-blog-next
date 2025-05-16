@@ -6,6 +6,7 @@ export default async function ExperiencesSection() {
   const fetchApi = new FetchApiClient();
 
   const getRepoCount = await fetchApi.Get<IGetGithubUser>(
+    "github",
     "users/miguelpombodev"
   );
 
