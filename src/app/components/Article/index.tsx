@@ -4,12 +4,11 @@ import ImageComponent from "../Image";
 import Link from "next/link";
 
 export default function ArticleComponent(props: ArticleComponentProps) {
-  console.log(props.article.slug);
   return (
     <div className="py-4 w-5/6 border-b-1 border-foreground">
       <Link
-        href={`/blog/${props.article.slug}`}
-        className="flex items-start h-30 gap-5 "
+        href={{ pathname: `/blog/${props.article.slug}` }}
+        className="flex items-start h-40 gap-5"
       >
         <ImageComponent
           src={props.article.articleImageSrc}
@@ -17,11 +16,13 @@ export default function ArticleComponent(props: ArticleComponentProps) {
           title="article-image"
           className="w-30 h-30 rounded-[10]"
         />
-        <div className="flex h-full flex-col justify-around">
+        <div className="flex h-full flex-col justify-between gap-2">
           <h2 className="font-bold text-2xl">{props.article.title}</h2>
-          <h3 className="font-extralight text-base text-gray-700">
-            {props.article.description}
-          </h3>
+          <div className="flex flex-1">
+            <h3 className="font-extralight text-sm text-gray-700">
+              {props.article.description}
+            </h3>
+          </div>
           <div className="flex">
             <span className="text-xs text-gray-700 flex gap-1 items-center">
               <Pen width={12} height={12} />
