@@ -1,11 +1,16 @@
 import { ArticleComponentProps } from "../../../lib/interfaces/components/article.interface";
 import { Pen } from "lucide-react";
 import ImageComponent from "../Image";
+import Link from "next/link";
 
 export default function ArticleComponent(props: ArticleComponentProps) {
+  console.log(props.article.slug);
   return (
     <div className="py-4 w-5/6 border-b-1 border-foreground">
-      <span className="flex items-start h-30 gap-5 ">
+      <Link
+        href={`/blog/${props.article.slug}`}
+        className="flex items-start h-30 gap-5 "
+      >
         <ImageComponent
           src={props.article.articleImageSrc}
           alt="article-image"
@@ -24,7 +29,7 @@ export default function ArticleComponent(props: ArticleComponentProps) {
             </span>
           </div>
         </div>
-      </span>
+      </Link>
     </div>
   );
 }

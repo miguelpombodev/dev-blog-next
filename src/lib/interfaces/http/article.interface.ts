@@ -3,5 +3,6 @@ export interface IArticle {
   articleImageSrc: string;
   title: string;
   description: string;
+  slug: string;
   createdAt: string;
 }
