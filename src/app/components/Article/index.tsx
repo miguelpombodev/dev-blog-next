@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ArticleComponent(props: ArticleComponentProps) {
   return (
-    <div className="py-4 w-5/6 border-b-1 border-foreground">
+    <div className="py-4 w-full border-b-1 border-foreground md:w-5/6">
       <Link
         href={{ pathname: `/blog/${props.article.slug}` }}
         className="flex items-start h-40 gap-5"
@@ -14,13 +14,13 @@ export default function ArticleComponent(props: ArticleComponentProps) {
           src={props.article.articleImageSrc}
           alt="article-image"
           title="article-image"
-          className="w-30 h-30 rounded-[10]"
+          className="w-18 h-18 rounded-[10] md:w-30 md:h-30"
         />
         <div className="flex h-full flex-col justify-between gap-2">
           <h2 className="font-bold text-2xl">{props.article.title}</h2>
           <div className="flex flex-1">
             <h3 className="font-extralight text-sm text-gray-700">
-              {props.article.description}
+              {props.article.briefDescription}
             </h3>
           </div>
           <div className="flex">

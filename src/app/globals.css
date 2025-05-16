@@ -77,6 +77,7 @@
 @theme inline {
   --color-secondary: #fa5140;
   --color-secondary-darker: #e03c2c;
+  --color-inactive: #c1c1c1;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-gray-light: #f3f3f3;
