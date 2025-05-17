@@ -15,3 +15,14 @@ export const getYearOfExperienceDiff = (): string => {
 
   return timeSpan.toString();
 };
+
+export const tranformTimezoneDateInLiteral = (value: string): string => {
+  const date = new Date(value);
+
+  const formatter = new Intl.DateTimeFormat("en", {
+    day: "2-digit",
+    month: "short",
+  });
+
+  return formatter.format(date);
+};
