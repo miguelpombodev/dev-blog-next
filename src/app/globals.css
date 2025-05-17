@@ -81,6 +81,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-gray-light: #f3f3f3;
+
+  --color-backend-tag: #6366f1;
+  --color-frontend-tag: #38bdf8;
+  --color-database-tag: #f59e0b;
+  --color-architecture-tag: #e879f9;
 }
 
 @media (prefers-color-scheme: dark) {
