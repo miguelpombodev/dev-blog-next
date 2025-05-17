@@ -6,4 +6,5 @@ export interface IArticle {
   content: string;
   slug: string;
   createdAt: string;
+  tags: string[];
 }
