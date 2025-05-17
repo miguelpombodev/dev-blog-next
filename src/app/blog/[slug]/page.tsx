@@ -1,22 +1,20 @@
-import MarkDownRenderer from "@/app/components/MarkdownRenderer";
 import dedent from "dedent";
 
 import { IArticle } from "@/lib/interfaces/http/article.interface";
 import FetchApiClient from "@/lib/axios";
 import { formatStringToMarkdown } from "@/util/strings.util";
 import { tranformTimezoneDateInLiteral } from "@/util/dates.util";
-interface ArticlePageProps {
-  params: {
-    slug: string;
-  };
-}
+import MarkDownRenderer from "@/app/components/MarkdownRenderer";
 
-export default async function Article({ params }: ArticlePageProps) {
+export default async function Article({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
   const fetchApi = new FetchApiClient();
-  const article = await fetchApi.Get<IArticle>(
-    "devblog",
-    `article/${params.slug}`
-  );
+  const article = await fetchApi.Get<IArticle>("devblog", `article/${slug}`);
 
   return (
     <div className="flex flex-col justify-start items-start w-full max-w-4xl mx-auto px-4 py-8">
