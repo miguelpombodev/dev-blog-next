@@ -7,11 +7,11 @@ import FetchApiClient from "@/lib/axios";
 function renderArticles(articles: IArticle[]) {
   if (articles.length === 0) {
     return (
-      <div className="text-center py-24">
+      <div className="text-center py-4 md:py-25">
         <p className="text-3xl text-inactive underline underline-offset-8 decoration-secondary mb-3.5">
-          Oh I so sorry! Ours articles are no available yet!
+          Oh I am so sorry! Ours articles are not available yet!
         </p>
-        <p>{"As soon as possible we'll have our articles listed here 😉"}</p>
+        <p>{"As soon as possible we'll have our articles listed here! 😉"}</p>
       </div>
     );
   }
