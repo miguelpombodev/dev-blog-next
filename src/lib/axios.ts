@@ -25,7 +25,7 @@ export default class FetchApiClient {
   public async Get<T>(flag: keyof UrlsMapType, url: string): Promise<T> {
     const baseUrl = this.getUrl(flag);
     const res = await fetch(`${baseUrl}/${url}`, {
-      next: { revalidate: this._cacheTime },
+      cache: "no-store",
     });
 
     if (!res.ok) {

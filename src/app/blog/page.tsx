@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { IArticle } from "@/lib/interfaces/http/article.interface";
 import ArticleComponent from "../components/Article";
 import FetchApiClient from "@/lib/axios";
