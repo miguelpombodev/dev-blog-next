@@ -1,7 +1,7 @@
 import ImageComponent from "@/app/components/Image";
 
 export default function AboutSection() {
-  const fileS3Image = `${process.env.NEXT_AWS_S3_URL}/BAFC0BF7-56D4-4AA6-BE85-CA416587EDB0.JPG`;
+  const fileS3Image = `${process.env.NEXT_AWS_S3_URL}/D7E22D59-538F-4A1B-9627-C595498299F8.JPG`;
 
   return (
     <div className="flex flex-col items-baseline justify-evenly max-h-2/8 py-11 md:flex-row md:items-center">
@@ -20,7 +20,7 @@ export default function AboutSection() {
         src={fileS3Image}
         alt="front-page-description-image"
         title="front-page-description-image"
-        className="w-2/3 self-center rounded-full md:w-2/9"
+        className="w-5/6 self-center rounded-[10] md:w-2/6"
       />
     </div>
   );
