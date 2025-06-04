@@ -1,10 +1,18 @@
+export interface ITag {
+  id: string;
+  name: string;
+  color: string;
+}
+
 export interface IArticle {
   _id: string;
   articleImageSrc: string;
-  briefDescription: string;
   title: string;
-  content: string;
+  briefDescription: string;
   slug: string;
+  content: string;
+  tags: ITag[];
   createdAt: string;
-  tags: string[];
+  updatedAt: string;
+  __v: number;
 }
