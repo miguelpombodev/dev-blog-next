@@ -10,15 +10,10 @@ export default function AboutSection() {
           Let’s Know More About Me
         </h2>
       </span>
-      <span className="flex p-7 md:w-1/5 whitespace-pre-line md:p-0 md:text-lg">
-        Hello! My name is Miguel! I am a Software Engineer and I am from Brazil
-        🇧🇷{"\n"}
-        It&apos;s so nice to meet you here in my webpage! Here you&apos;ll see
-        some of my professional experiencies, some projects that worked for and
-        also some of my blog posts, in which could be related to .NET,
-        Databases, Developer Career, and so on.{"\n"}
-        Be free to check my social medias, and send me a DM there!{"\n"}
-        See you, friend!
+      <span className="text-center flex p-7 md:w-1/5 whitespace-pre-line md:p-0 md:text-lg">
+        {
+          "👋 Hi, I'm Miguel — a passionate Software Engineer from Brazil 🇧🇷 \n\n Welcome to my website! \n\n Here you'll find real-world projects I've built, insights from my 8+ years of experience, and blog posts covering topics like .NET, databases, backend architecture, and developer career tips. Feel free to connect with me on social media and send a DM. Let's build something great together!"
+        }
       </span>
 
       <ImageComponent

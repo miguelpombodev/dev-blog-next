@@ -26,7 +26,7 @@ export default function TechStack() {
   return (
     <div className="flex flex-col text-center pt-11 pb-7 justify-evenly">
       <h2 className="font-bold text-3xl underline underline-offset-10 decoration-secondary mb-13 md:text-4xl">
-        Tools and Frameworks Expertise
+        Tech Stack & Frameworks I Master
       </h2>
       <div className="">
         <CaroulselComponent
