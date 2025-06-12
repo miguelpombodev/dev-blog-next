@@ -17,7 +17,7 @@ export default function ArticleComponent(props: ArticleComponentProps) {
             src={props.article.articleImageSrc}
             alt="article-image"
             title="article-image"
-            className="w-18 h-18 rounded-[10] md:w-30 md:h-30"
+            className="w-18 h-18 rounded-[10] object-cover md:w-30 md:h-30"
           />
           <div>
             <h2 className="font-bold text-2xl">{props.article.title}</h2>
