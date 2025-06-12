@@ -49,7 +49,7 @@ export default function Article({
           src={article.articleImageSrc}
           alt={article.title}
           title={article.title}
-          className="w-full h-40 object-cover object-[15%_90%] rounded-[10] md:h-60"
+          className="w-full h-40 object-cover object-[20%_10%] rounded-[10] md:h-100"
         />
         <h1 className="text-5xl font-bold">{article.title}</h1>
         <div className="flex gap-5">
