@@ -52,7 +52,7 @@ export default function Article({
           className="w-full h-40 object-cover object-[20%_10%] rounded-[10] md:h-100"
         />
         <h1 className="text-5xl font-bold">{article.title}</h1>
-        <div className="flex gap-5">
+        <div className="flex gap-3">
           {article.tags.map((tag) => (
             <TagComponent key={tag.name} name={tag.name} color={tag.color} />
           ))}
