@@ -4,13 +4,14 @@ import ImageComponent from "../Image";
 import Link from "next/link";
 import { tranformTimezoneDateInLiteral } from "@/util/dates.util";
 import TagComponent from "../Tags";
+import { truncateWithEllipsis } from "@/util/strings.util";
 
 export default function ArticleComponent(props: ArticleComponentProps) {
   return (
     <div className="py-6 w-full border-b-1 border-foreground">
       <Link
         href={{ pathname: `/blog/${props.article.slug}` }}
-        className="flex flex-col items-start h-40 gap-5"
+        className="flex flex-col items-start gap-5"
       >
         <div className="flex h-full w-full gap-5">
           <ImageComponent
@@ -20,10 +21,12 @@ export default function ArticleComponent(props: ArticleComponentProps) {
             className="w-18 h-18 rounded-[10] object-cover md:w-30 md:h-30"
           />
           <div>
-            <h2 className="font-bold text-2xl">{props.article.title}</h2>
+            <h2 className="font-bold text-2xl mb-3">
+              {truncateWithEllipsis(props.article.title, 45)}
+            </h2>
             <div className="flex flex-1">
               <h3 className="font-extralight text-sm text-gray-700">
-                {props.article.briefDescription}
+                {truncateWithEllipsis(props.article.briefDescription, 80)}
               </h3>
             </div>
           </div>
