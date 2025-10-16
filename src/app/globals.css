@@ -167,3 +167,179 @@ button {
   font-weight: 600;
   cursor: pointer;
 }
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.5;
+  tab-size: 2;
+  hyphens: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pre container */
+pre {
+  background: linear-gradient(180deg, #2b2b2b 0%, #292a2b 100%);
+  color: #ffffff;
+  padding: 16px 18px;
+  border-radius: 8px;
+  overflow: auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  position: relative;
+  margin: 1rem 0;
+  white-space: pre;
+}
+
+/* Code block itself */
+pre code {
+  display: block;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  min-width: 100%;
+  white-space: pre;
+}
+
+/* Optional line numbers container (if you render numbers yourself) */
+pre .line-numbers {
+  position: absolute;
+  left: 8px;
+  top: 16px;
+  bottom: 16px;
+  width: 44px;
+  text-align: right;
+  padding-right: 12px;
+  user-select: none;
+  color: rgba(169, 183, 198, 0.45);
+  font-size: 12px;
+  line-height: 1.5;
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Make room for line numbers */
+pre.has-line-numbers {
+  padding-left: 72px;
+}
+
+/* Scrollbar styling (WebKit) */
+pre::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Token colors (Prism / Highlight.js style classes) */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #808080; /* gray comments */
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #a9b7c6;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #6897bb; /* blue-ish */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #6a8759; /* green */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a9b7c6;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #cc7832; /* orange */
+  font-weight: 600;
+}
+
+.token.function,
+.token.class-name {
+  color: #ffc66d; /* yellow-ish */
+}
+
+.token.regex,
+.token.important {
+  color: #e8bf6a;
+}
+
+/* Highlight current line (if you add a .line-highlight element) */
+pre .line-highlight {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  margin: 0;
+  padding: 0 18px;
+}
+
+/* Lightweight "copy" button */
+.pre-copy-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #f1f1f1;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+.pre-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Responsive: reduce padding on small screens */
+@media (max-width: 640px) {
+  pre {
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+  pre.has-line-numbers {
+    padding-left: 62px;
+  }
+}
