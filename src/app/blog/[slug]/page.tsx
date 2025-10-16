@@ -64,7 +64,7 @@ export default function Article({
         </div>
       </div>
       <div
-        className="prose max-w-none p-8 py-4 mb-10"
+        className="prose max-w-none py-4 mb-10"
         dangerouslySetInnerHTML={{ __html: Purify.sanitize(article.content) }}
       />
       <div className="flex flex-col w-full mt-5 pt-3 border-t-1 border-gray-200 gap-10 mb-20">
